@@ -1,0 +1,268 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* CSS Reset End */
+
+/* Custom Index CSS */
+
+@font-face {
+  font-family: "roboto";
+  src: url("/assets/fonts/Roboto-Regular.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "roboto-bold";
+  src: url("/assets/fonts/Roboto-Bold.ttf") format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: "roboto", sans-serif;
+  color: hsl(234, 30%, 20%);
+}
+
+h1 {
+  font-family: "roboto-bold";
+  font-weight: bold;
+  font-size: 3rem;
+  color: hsl(234, 30%, 20%);
+  line-height: 1.5rem;
+  margin-bottom: 2.2rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+form input {
+  margin-bottom: 1.3rem;
+  padding: 10px;
+  border: solid hsl(0, 0%, 84%) 1px;
+  border-radius: 5px;
+}
+
+button {
+  font-family: "roboto-bold";
+  color: hsl(233, 14%, 97%);
+  background: hsl(234, 30%, 20%);
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+button:hover {
+  color: white;
+  background: linear-gradient(to right, hsl(347, 89%, 64%), hsl(14, 90%, 60%));
+}
+
+.container {
+  background: hsl(235, 18%, 26%);
+  display: flex;
+  min-height: 100vh;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background: white;
+  border-radius: 30px;
+}
+
+.content-column {
+  font-size: .85rem;
+  max-width: 320px;
+  margin: auto;
+  justify-content: center;
+  text-align: left;
+}
+
+.image-column {
+  padding: 20px;
+}
+
+.bullet-point {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 1rem;
+}
+
+.input-error {
+  border: 1px hsl(4, 100%, 67%)solid;
+  background: hsl(5, 85%, 95%);
+  color: hsl(4, 100%, 67%);
+}
+
+.label-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+label {
+  font-family: "roboto-bold";
+  color: hsl(234, 30%, 20%);
+  font-size: .7rem;
+}
+
+.error-message {
+  font-family: "roboto-bold";
+  color: hsl(4, 100%, 67%);
+  font-size: .7rem;
+}
+
+.success-wrapper {
+  background: white;
+  border-radius: 30px;
+  max-width: 480px;
+  padding: 50px 60px 60px;
+}
+
+.success-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.success-image {
+  width: 80px;
+  margin-bottom: 2rem;
+}
+
+.success-content h1 {
+  line-height: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.success-content p {
+  margin-bottom: 2.2rem;
+}
+
+@media (max-width: 675px) {
+
+  .newsletter-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    border-radius: 0px;
+    min-height: 100vh;
+  }
+
+  .image-column {
+    padding: 0px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-top: 3rem;
+  }
+
+  .content-column {
+    font-size: 1rem;
+  }
+
+  form {
+    margin-bottom: 2rem;
+  }
+
+  .success-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0px;
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+
+  .success-content {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .success-content button {
+    margin-top: auto;
+  }
+
+  .success-image {
+    margin-top: 6rem;
+    margin-bottom: 0;
+  }
+
+}
