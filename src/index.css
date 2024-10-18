@@ -164,6 +164,10 @@ button:hover {
   margin-bottom: 1rem;
 }
 
+#email {
+  padding: 15px;
+}
+
 .input-error {
   border: 1px hsl(4, 100%, 67%)solid;
   background: hsl(5, 85%, 95%);
